@@ -6,7 +6,7 @@
 /*   By: oeddamou <oeddamou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 16:38:15 by oeddamou          #+#    #+#             */
-/*   Updated: 2025/03/26 10:36:34 by oeddamou         ###   ########.fr       */
+/*   Updated: 2025/03/26 10:53:45 by oeddamou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ void	ft_to_str(t_data *v)
 		v->i = 0;
 	}
 }
+
 void	ft_action(int sig, siginfo_t *info, void *context)
 {
 	static t_data	v;

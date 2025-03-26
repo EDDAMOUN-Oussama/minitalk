@@ -6,7 +6,7 @@
 /*   By: oeddamou <oeddamou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 16:39:33 by oeddamou          #+#    #+#             */
-/*   Updated: 2025/03/24 09:51:39 by oeddamou         ###   ########.fr       */
+/*   Updated: 2025/03/26 10:53:16 by oeddamou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,15 @@ void	ft_putstr_fd(char *s, int fd)
 	{
 		while (s[i])
 		{
-			write (fd, &s[i], 1);
+			write(fd, &s[i], 1);
 			i++;
 		}
 	}
 }
 
-int ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])

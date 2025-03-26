@@ -6,7 +6,7 @@
 /*   By: oeddamou <oeddamou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 16:38:15 by oeddamou          #+#    #+#             */
-/*   Updated: 2025/03/26 10:47:00 by oeddamou         ###   ########.fr       */
+/*   Updated: 2025/03/26 10:55:59 by oeddamou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ void	ft_inisial(t_data *v, int c)
 		exit(1);
 	}
 	if (c == 2)
-		{
-			ft_putstr_fd(v->str, 1);
-			kill(v->pid_c, SIGUSR2);
-		}
+	{
+		ft_putstr_fd(v->str, 1);
+		kill(v->pid_c, SIGUSR2);
+	}
 }
 
 void	ft_to_str(t_data *v)
@@ -54,6 +54,7 @@ void	ft_to_str(t_data *v)
 		v->i = 0;
 	}
 }
+
 void	ft_action(int sig, siginfo_t *info, void *context)
 {
 	static t_data	v;

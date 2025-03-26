@@ -6,7 +6,7 @@
 /*   By: oeddamou <oeddamou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 15:14:30 by oeddamou          #+#    #+#             */
-/*   Updated: 2025/03/26 10:44:47 by oeddamou         ###   ########.fr       */
+/*   Updated: 2025/03/26 10:53:59 by oeddamou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	ft_exit(int sig, siginfo_t *info, void *context)
 {
-    if (sig == SIGUSR2)
-    {
-        exit(1);
-    }
+	if (sig == SIGUSR2)
+	{
+		exit(1);
+	}
 }
 
 void	ft_send_char(pid_t pid, unsigned char c)
@@ -82,9 +82,9 @@ void	ft_send(pid_t pid, char *str)
 
 int	main(int ac, char **av)
 {
-	int	pid_s;
+	int					pid_s;
 	struct sigaction	sa;
-    
+
 	if (ac != 3)
 	{
 		ft_putstr_fd("the correct forma:\n./client <PID:int> <str:string>", 2);
@@ -97,7 +97,7 @@ int	main(int ac, char **av)
 		exit(1);
 	}
 	ft_send(pid_s, av[2]);
-    sa.sa_sigaction = ft_exit;
+	sa.sa_sigaction = ft_exit;
 	sa.sa_flags = SA_SIGINFO;
 	sigemptyset(&sa.sa_mask);
 	sigaction(SIGUSR2, &sa, NULL);
