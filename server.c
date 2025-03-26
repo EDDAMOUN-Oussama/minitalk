@@ -14,6 +14,8 @@
 
 void	ft_inisial(t_data *v, int c)
 {
+	if (c == 2)
+		ft_putstr_fd(v->str, 1);
 	free(v->str);
 	v->str = NULL;
 	v->c = 0;
@@ -25,8 +27,6 @@ void	ft_inisial(t_data *v, int c)
 		ft_putstr_fd("Error: malloc fatal\n", 2);
 		exit(1);
 	}
-	if (c == 2)
-		ft_putstr_fd(v->str, 1);
 }
 
 void	ft_to_str(t_data *v)
